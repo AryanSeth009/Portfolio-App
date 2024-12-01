@@ -160,11 +160,11 @@ function Projects() {
                     loop
                     muted
                     className="v_1 absolute h-[600px] w-[650px] inset-0 m-auto"
-                    src="./videos/soon.mp4"
+                    src="./videos/expense.mp4"
                   ></video>
                   <div className="flex flex-row  pt-2  ">
                     <h3 className="flex font-semibold w-fit  text-[50px] pb-20">
-                      Express System App
+                      BudgetBuddy App
                     </h3>
                     <a
                       href=""
