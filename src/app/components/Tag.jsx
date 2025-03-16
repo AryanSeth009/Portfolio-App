@@ -19,21 +19,31 @@ export default function Tag() {
   }, []);
 
   return (
-    <div className="p-4 bg-black flex items-center justify-center overflow-hidden">
+    <div className="p-2 md:p-4 bg-black flex items-center justify-center overflow-hidden">
       <h2
         ref={textRef}
-        className="font-bold uppercase text-[#D1D1C7] text-4xl whitespace-nowrap"
+        className="font-bold uppercase text-[#D1D1C7] text-xl md:text-4xl whitespace-nowrap"
         style={{ display: "inline-block", whiteSpace: "nowrap" }}
       >
-        <span className="inline-block pr-5">Bring your vision to life</span>
-        <span className="inline-block pl-5 pr-5">✦</span>
-        <span className="inline-block pl-5 pr-5">Bring your vision to life</span>
-        <span className="inline-block pl-5 pr-5">✦</span>
-        <span className="inline-block pl-5">Bring your vision to life</span>
+        <span className="inline-block pr-3 md:pr-5">
+          Bring your vision to life
+        </span>
+        <span className="inline-block px-2 md:px-5">✦</span>
+        <span className="inline-block px-2 md:px-5">
+          Bring your vision to life
+        </span>
+        <span className="inline-block px-2 md:px-5">✦</span>
+        <span className="inline-block px-2 md:px-5">
+          Bring your vision to life
+        </span>
         {/* Duplicate the content for seamless looping */}
-        <span className="inline-block pr-5 pl-10">Bring your vision to life</span>
-        <span className="inline-block pl-5 pr-5">✦</span>
-        <span className="inline-block pl-5">Bring your vision to life</span>
+        <span className="inline-block px-2 md:px-5">
+          Bring your vision to life
+        </span>
+        <span className="inline-block px-2 md:px-5">✦</span>
+        <span className="inline-block px-2 md:px-5">
+          Bring your vision to life
+        </span>
       </h2>
     </div>
   );

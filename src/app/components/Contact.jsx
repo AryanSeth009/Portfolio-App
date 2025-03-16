@@ -20,51 +20,54 @@ function Contact() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
     };
-  
-    console.log('Submitting data:', data); // Log request payload
-  
+
+    console.log("Submitting data:", data); // Log request payload
+
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
-  
+
       if (!response.ok) {
         const error = await response.json();
-        console.error('Error response:', error); // Log error response
+        console.error("Error response:", error); // Log error response
       } else {
         const result = await response.json();
-        console.log('Success:', result);
-        alert('Thank you for contacting me. I will get back to you soon!')
+        console.log("Success:", result);
+        alert("Thank you for contacting me. I will get back to you soon!");
       }
     } catch (error) {
-      console.error('Fetch error:', error.message);
-      alert('Failed to contact me. Please try again later.');
+      console.error("Fetch error:", error.message);
+      alert("Failed to contact me. Please try again later.");
     }
   };
   const handleRedirect = (url) => {
     window.location.href = url;
   };
   return (
-    <div id="contact" className="h-full flex flex-row p-10 scroll-smooth  flex-1 gap-4 bg-[#E6E6E1]">
-      <div className=" w-[50%]  h-fit">
-        <h1 className="font-bold text-[40px]">Let's Connect</h1>
+    <div
+      id="contact"
+      className="h-full flex flex-col md:flex-row p-4 md:p-10 scroll-smooth gap-8 md:gap-4 bg-[#E6E6E1]"
+    >
+      <div className="w-full md:w-[50%] h-fit">
+        <h1 className="font-bold text-3xl md:text-[40px]">Let's Connect</h1>
         <br />
-        <p className="text-[20px]">
+        <p className="text-base md:text-[20px]">
           I'm currently looking for new opportunities, my inbox is always open.
           Whether you have a question or just want to say hi, I'll try my best
           to get back to you!
         </p>
         <div className="pt-4 flex flex-start mt-2">
-          <div class="parent flex flex-wrap flex-start">
-            <div className="child child-5 ">
+          <div className="parent flex flex-wrap gap-4 justify-center md:justify-start">
+            <div className="child child-5">
               <button
                 className="button btn-5 bg-white"
                 onClick={() =>
@@ -73,7 +76,7 @@ function Contact() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  height="1.6em"
+                  height="1.4em"
                   viewBox="0 0 24 24"
                   fill="rgba(44,0,218,1)"
                 >
@@ -81,7 +84,7 @@ function Contact() {
                 </svg>
               </button>
             </div>
-            <div class="child child-1">
+            <div className="child child-1">
               <button
                 className="button btn-1 bg-white"
                 onClick={() => handleRedirect("https://x.com/Aryanseth41")}
@@ -148,10 +151,10 @@ function Contact() {
         </div>
       </div>
 
-      <div className=" w-[50%]  gap-14  flex flex-col align-middle  items-center border-4 h-full p-14 rounded-lg border-black pl-10 ">
-        <form onSubmit={handleSubmit}>
-          <div className="input__container mb-10 w-[400px] border">
-            <button class="input__button__shadow">
+      <div className="w-full md:w-[50%] flex flex-col align-middle items-center border-2 md:border-4 h-full p-6 md:p-14 rounded-lg border-black">
+        <form onSubmit={handleSubmit} className="w-full max-w-[400px]">
+          <div className="input__container mb-6 md:mb-10 w-full border">
+            <button className="input__button__shadow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -166,15 +169,15 @@ function Contact() {
             <input
               type="email"
               name="email"
-              class="input__search"
+              className="input__search"
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter email"
             />
           </div>
-          <div className="input__container name  mb-10 w-[400px]">
-            <div class="shadow__input"></div>
-            <button class="input__button__shadow">
+          <div className="input__container name mb-6 md:mb-10 w-full">
+            <div className="shadow__input"></div>
+            <button className="input__button__shadow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -189,15 +192,15 @@ function Contact() {
             <input
               type="name"
               name="name"
-              class="input__search"
+              className="input__search"
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter Full Name"
             />
           </div>
-          <div className="input__container phone mb-10 w-[400px]">
-            <div class="shadow__input"></div>
-            <button class="input__button__shadow">
+          <div className="input__container phone mb-6 md:mb-10 w-full">
+            <div className="shadow__input"></div>
+            <button className="input__button__shadow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -212,16 +215,16 @@ function Contact() {
             <input
               type="tel"
               name="phone"
-              class="input__search"
+              className="input__search"
               value={formData.phone}
               onChange={handleChange}
               placeholder="Enter Contact Number"
             />
           </div>
-          <div className="flex items-center justify-center mt-4 ">
+          <div className="flex items-center justify-center mt-4">
             <button
               type="submit"
-              className="btn border-2 -rotate-3 border-black bg-[#F3CBA5] font-bold text-black p-0"
+              className="btn border-2 -rotate-3 border-black bg-[#F3CBA5] font-bold text-black p-0 w-full md:w-auto"
             >
               Submit
             </button>

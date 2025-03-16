@@ -1,45 +1,74 @@
 // components/Footer.tsx
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { AiOutlineTwitter, AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  AiOutlineTwitter,
+  AiFillInstagram,
+  AiFillFacebook,
+} from "react-icons/ai";
 
-const Footer=() => {
-  return ( 
-    <footer className="flex text bg-[#E6E6E1] rounded-lg text-[#000] p-0 gap-20  justify-evenly flex-wrap items-center h-[400px] space-y-60 w-full ">
-      <div className='flex  flex-col absolute justify-center items-center text-center flex-wrap  pb-10'>
-        <p className='text-lg'>Got a project? Need an unfair advantage?</p>
-        <a href="#">
-         <h3 className='text-9xl font-medium'>GET IN T<span className='font-semibold'>O</span>UCH</h3>
-
-        </a>
+const Footer = () => {
+  return (
+    <footer className="flex flex-col bg-[#E6E6E1] rounded-lg text-[#000] p-4 md:p-0 justify-between items-center min-h-[300px] md:h-[400px] w-full relative">
+      <div className="flex flex-col justify-center items-center text-center w-full mb-8 md:mb-0 md:absolute md:top-1/2 md:-translate-y-1/2">
+        <p className="text-base md:text-lg mb-2 md:mb-4">
+          Got a project? Need an unfair advantage?
+        </p>
+        <h3 className="text-4xl md:text-6xl lg:text-9xl font-medium">
+          <a
+            href="#contact"
+            className="hover:opacity-90 transition-opacity inline-block"
+          >
+            GET IN T<span className="font-semibold">O</span>UCH
+          </a>
+        </h3>
       </div>
-      <div className="col-md-4 d-flex items-center  gap-20 align-items-center flex-row">
-        <a href="/" className="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          {/* Replace with your SVG or other logo if needed */}
-          <svg className="bi" width="30" height="24">
-            <use xlinkHref="#bootstrap" />
-          </svg>
-        </a>
-        <span className="mb-2 mb-md-0 text-body-secondary"> @ setharyan53@gmail.com</span>
-      </div>
 
-      <ul className="nav col-md-4 gap-4 flex justify-center   justify-content-end list-unstyled d-flex">
-        <li className="ms-3">
-          <a className="text-body-secondary" href="https://x.com/Aryanseth41">
-            <AiOutlineTwitter size={24} />
+      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-20 w-full justify-center md:justify-between px-4 md:px-20 mt-auto">
+        <div className="flex items-center gap-4 md:gap-20">
+          <a href="/" className="text-body-secondary text-decoration-none">
+            <svg className="bi" width="24" height="24" viewBox="0 0 24 24">
+              <use xlinkHref="#bootstrap" />
+            </svg>
           </a>
-        </li>
-        <li className="ms-3">
-          <a className="text-body-secondary" href="https://www.instagram.com/aryanseth_02/">
-            <AiFillInstagram size={24} />
-          </a>
-        </li>
-        <li className="ms-3">
-          <a className="text-body-secondary" href="https://www.facebook.com/aryan.seth.3720/">
-            <AiFillFacebook size={24} />
-          </a>
-        </li>
-      </ul>
+          <span className="text-sm md:text-base text-body-secondary">
+            @ setharyan53@gmail.com
+          </span>
+        </div>
+
+        <ul className="flex gap-6 md:gap-8 items-center list-none p-0 m-0">
+          <li>
+            <a
+              className="text-body-secondary hover:opacity-70 transition-opacity"
+              href="https://x.com/Aryanseth41"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiOutlineTwitter size={20} className="md:w-6 md:h-6" />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-body-secondary hover:opacity-70 transition-opacity"
+              href="https://www.instagram.com/aryanseth_02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiFillInstagram size={20} className="md:w-6 md:h-6" />
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-body-secondary hover:opacity-70 transition-opacity"
+              href="https://www.facebook.com/aryan.seth.3720/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiFillFacebook size={20} className="md:w-6 md:h-6" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 };
