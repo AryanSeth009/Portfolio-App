@@ -69,8 +69,8 @@ function About() {
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 pt-4">
           <img
             ref={boxRef}
-            className="h-[300px] md:h-[600px] pt-4 p-4 w-auto rounded-2xl mx-auto md:mx-0"
-            src="./images/laptop_bg.png"
+            className="h-[300px] md:h-[600px] pt-4 p-4 w-auto !rounded-2xl mx-auto md:mx-0"
+            src="./images/GptImage.png"
             alt=""
           />
           <div className="text_part mt-6 md:mt-0">
