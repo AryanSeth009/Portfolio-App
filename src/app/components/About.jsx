@@ -87,7 +87,7 @@ function About() {
             <div className="flex h-auto text-[#A19D9A] pt-6 md:pt-10">
               <p className="para flex flex-wrap gap-4 md:gap-8 font-thin text-base md:text-xl lg:text-2xl justify-start w-full md:w-[600px] items-start">
                 ( ABOUT ME ){" "}
-                <span className="flex flex-wrap text-base md:text-xl lg:text-2xl">
+                <span className="flex flex-wrap text-base md:text-xl leading-10 lg:text-2xl">
                   Creating great websites and giving users a better experience
                   is my primary focus. I ensure each project leaves users a good
                   sensation through

@@ -150,7 +150,7 @@ function Projects() {
             <div className="flex w-full md:w-auto h-[400px] md:h-[580px] relative px-4 md:mr-20">
               <div className="relative flex justify-center items-center w-full h-full">
                 <a
-                  href="https://github.com/AryanSeth009/express-system-app"
+                  href="https://budget-buddy-main.vercel.app/"
                   className="relative w-full"
                 >
                   <img
@@ -169,7 +169,7 @@ function Projects() {
                     <h3 className="flex font-semibold text-3xl md:text-[50px] pb-10 md:pb-20">
                       BudgetBuddy App
                     </h3>
-                    <a href="" className="pt-2 md:pt-2 ml-auto">
+                    <a href="https://github.com/AryanSeth009/budget_buddy" className="pt-2 md:pt-2 ml-auto">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
