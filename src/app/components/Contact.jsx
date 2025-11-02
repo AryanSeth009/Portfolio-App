@@ -101,7 +101,7 @@ function Contact() {
             </div>
             <div className="child child-2">
               <button
-                class="button btn-2  bg-white"
+                classname="button btn-2  bg-white"
                 onClick={() =>
                   handleRedirect("https://www.instagram.com/aryanseth_02/")
                 }
@@ -116,9 +116,9 @@ function Contact() {
                 </svg>
               </button>
             </div>
-            <div class="child child-3">
+            <div classname="child child-3">
               <button
-                class="button btn-3  bg-white "
+                classname="button btn-3  bg-white "
                 onClick={() => handleRedirect("https://github.com/DevilAr69/")}
               >
                 <svg
@@ -130,9 +130,9 @@ function Contact() {
                 </svg>
               </button>
             </div>
-            <div class="child child-4">
+            <div classname="child child-4">
               <button
-                class="button btn-4  bg-white"
+                classname="button btn-4  bg-white"
                 onClick={() =>
                   handleRedirect("https://www.facebook.com/aryan.seth.3720/")
                 }

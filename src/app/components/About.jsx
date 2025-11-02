@@ -70,7 +70,7 @@ function About() {
           <img
             ref={boxRef}
             className="h-[300px] md:h-[600px] pt-4 p-4 w-auto !rounded-2xl mx-auto md:mx-0"
-            src="./images/GptImage.png"
+            src="./images/developer page.jpg"
             alt=""
           />
           <div className="text_part mt-6 md:mt-0">
