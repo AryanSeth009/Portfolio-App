@@ -73,10 +73,10 @@ const HeroSection = () => {
             <Link
               href="/"
               onClick={handleDownload}
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white text-center"
+              className="px-1 inline-block py-1 w-full lg:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white hover:text-black text-center"
             >
               <button className="w-full">
-                <span className="span-mother w-auto p-2">
+                <span className="span-mother hover:rounded-full w-auto p-2 lg:p-0`">
                   <span>D</span>
                   <span>o</span>
                   <span>w</span>
@@ -88,7 +88,7 @@ const HeroSection = () => {
                   <span>C </span>
                   <span>V </span>
                 </span>
-                <span className="span-mother2">
+                {/* <span className="span-mother">
                   <span>D</span>
                   <span>o</span>
                   <span>w</span>
@@ -99,7 +99,7 @@ const HeroSection = () => {
                   <span>d </span>
                   <span>C </span>
                   <span>V </span>
-                </span>
+                </span> */}
               </button>
             </Link>
           </div>

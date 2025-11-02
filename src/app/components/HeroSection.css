@@ -26,7 +26,7 @@ button {
   }
   
 
-  
+/*   
   button .span-mother {
     display: flex;
     overflow: hidden;
@@ -71,11 +71,11 @@ button {
   }
   
   button .span-mother2 span {
-    transform: translateY(-1.2em);
+    transform: translateY(0);
   }
   
   button:hover .span-mother2 span {
-    transform: translateY(0);
+    transform: translateY(1.8em);
   }
   
   button .span-mother2 span {
@@ -101,4 +101,6 @@ button {
   button .span-mother2 span:nth-child(6) {
     transition: 0.7s;
   }
-  
+   */
+ 
+ 
