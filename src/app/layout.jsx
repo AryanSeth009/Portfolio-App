@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "./components/ScrollToTop";
+import MobileViewportFix from "./components/MobileViewportFix";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <ScrollToTop />
+        <MobileViewportFix />
         {children}
       </body>
     </html>
