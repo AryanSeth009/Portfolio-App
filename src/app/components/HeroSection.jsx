@@ -21,7 +21,7 @@ const HeroSection = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Aryan Latest Resume.pdf";
+    link.href = "/Aryan Startup Resume.pdf";
     link.download = "Aryan_Seth_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -29,7 +29,8 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="py-8 lg:py-10 sticky h-auto bg-[#E6E6E1] md:py-20 sm:py-20 px-4 md:pl-6">
+    <section className="hero-section py-8 lg:py-10 sticky h-auto bg-[#E6E6E1] md:py-20 sm:py-20 px-4 md:pl-6">
+      
       <div className="grid grid-cols-1 sm:grid-cols-12 pt-4 md:pt-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}

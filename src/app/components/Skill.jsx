@@ -3,25 +3,25 @@ import "./Skill.css"; // Import the CSS file for the animation
 
 function Skill() {
   return (
-    <div className="skill h-auto pb-10 md:pb-20 overflow-hidden">
+    <div className="skill rounded-xl h-auto p-16 pb-10 md:pb-20 overflow-hidden">
       <div className="header_part mb-8 md:mb-12">
-        <h2 className="text-4xl md:text-6xl text-center uppercase font-semibold">
+        <h2 className="text-4xl md:text-8xl text-center uppercase font-bold">
           Skills
         </h2>
       </div>
       <div className="skills-wrapper">
-        <div className="skills2 gap-4 md:gap-8 flex items-center align-items-center">
+        <div className="skills2 pt-16 gap-4 md:gap-8 flex items-center align-items-center">
           {/* Icons go here */}
           <div className="icon html">
             <a href="">
               <img
-                className="h-12 w-12 md:h-20 md:w-20"
+                className="h-24 w-24 md:h-20 md:w-20"
                 src="https://cdn.iconscout.com/icon/premium/png-256-thumb/html5-3-502526.png?f=webp&w=256"
                 alt=""
               />
             </a>
           </div>
-          <div className="icon css h-12 w-12 md:h-20 md:w-20">
+          <div className="icon css h-24 w-24 md:h-20 md:w-20">
             <a href="">
               <img
                 className="bg-none"
@@ -30,7 +30,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon js h-14 w-14 md:h-24 md:w-24">
+          <div className="icon js h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png"
@@ -38,7 +38,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon tailwind css h-12 w-12 md:h-20 md:w-20 align-middle items-center">
+          <div className="icon tailwind css h-24     w-24 md:h-20 md:w-20 align-middle items-center">
             <a href="" className="items-center">
               <img
                 className="pt-2 md:pt-4"
@@ -56,7 +56,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-14 w-14 md:h-24 md:w-24">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white pt-2 md:pt-3"
@@ -65,7 +65,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-12 w-12 md:h-20 md:w-20">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white"
@@ -74,7 +74,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-12 w-12 md:h-20 md:w-20">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white"
@@ -83,7 +83,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-12 w-12 md:h-20 md:w-20">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white"
@@ -101,7 +101,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-12 w-12 md:h-20 md:w-20">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white"
@@ -110,7 +110,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-12 w-12 md:h-20 md:w-20">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white"
@@ -119,7 +119,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-12 w-12 md:h-20 md:w-20">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white"
@@ -133,13 +133,13 @@ function Skill() {
           <div className="icon html">
             <a href="">
               <img
-                className="h-12 w-12 md:h-20 md:w-20"
+                className="h-24 w-24 md:h-20 md:w-20"
                 src="https://cdn.iconscout.com/icon/premium/png-256-thumb/html5-3-502526.png?f=webp&w=256"
                 alt=""
               />
             </a>
           </div>
-          <div className="icon css h-12 w-12 md:h-20 md:w-20">
+          <div className="icon css h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="bg-none"
@@ -148,7 +148,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon js h-14 w-14 md:h-24 md:w-24">
+          <div className="icon js h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png"
@@ -156,7 +156,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon tailwind css h-12 w-12 md:h-20 md:w-20 align-middle items-center">
+          <div className="icon tailwind css h-24 w-24 md:h-24 md:w-24 align-middle items-center">
             <a href="" className="items-center">
               <img
                 className="pt-2 md:pt-4"
@@ -174,7 +174,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-14 w-14 md:h-24 md:w-24">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white pt-2 md:pt-3"
@@ -228,7 +228,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-14 w-14">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white"
@@ -237,7 +237,7 @@ function Skill() {
               />
             </a>
           </div>
-          <div className="icon h-12 w-12 md:h-20 md:w-20">
+          <div className="icon h-24 w-24 md:h-24 md:w-24">
             <a href="">
               <img
                 className="color-white"

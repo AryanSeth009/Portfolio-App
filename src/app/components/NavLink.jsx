@@ -1,9 +1,12 @@
+"use client";
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const NavLink = ({ href, title }) => {
   const [isMounted, setIsMounted] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setIsMounted(true);
@@ -24,7 +27,8 @@ const NavLink = ({ href, title }) => {
         });
       }
     } else {
-      useRouter().push(href);
+      e.preventDefault();
+      router.push(href);
     }
   };
 
