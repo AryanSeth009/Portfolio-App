@@ -12,7 +12,34 @@ export default function StackProvider({ children }) {
 
     gsap.registerPlugin(ScrollTrigger);
 
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
     const sections = gsap.utils.toArray(".stack-section");
+
+    if (isMobile) {
+      sections.forEach((section) => {
+        gsap.fromTo(
+          section,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            scrollTrigger: {
+              trigger: section,
+              start: "top 90%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
+
+      ScrollTrigger.refresh();
+
+      return () => {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      };
+    }
 
     sections.forEach((section, index) => {
       gsap.set(section, {

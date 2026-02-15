@@ -1241,10 +1241,25 @@ video {
 
 *{@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');}
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .stack-section {
   min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .stack-section {
+    min-height: 100dvh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 .hover\:rounded-full:hover {
@@ -1570,6 +1585,11 @@ video {
 
   .md\:p-4 {
     padding: 1rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:px-20 {
