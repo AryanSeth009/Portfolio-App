@@ -1,11 +1,10 @@
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 const ScrollToTop = () => {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     const prefersReducedMotion =
@@ -18,7 +17,7 @@ const ScrollToTop = () => {
       left: 0,
       behavior: prefersReducedMotion ? "auto" : "smooth",
     });
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
 };
