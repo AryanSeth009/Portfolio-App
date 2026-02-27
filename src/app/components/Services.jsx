@@ -4,7 +4,7 @@ import React from "react";
 import "./services.css";
 function Services() {
   return (
-    <div className="services h-auto w-full p-4 mb-40 md:mb-80 pb-32 md:pb-72">
+    <div className="services h-auto w-full p-4 mb-20 md:mb-80 pb-10 md:pb-72">
       <div className="flex flex-col md:flex-row gap-8 md:gap-0">
         <div className="section-1">
           <h2 className="uppercase tracking-tighter w-full md:w-[950px] text-[#D1D1C7] text-start font-bold font-ppneuemontreal text-5xl md:text-9xl">

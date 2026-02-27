@@ -12,9 +12,8 @@ export default function StackSection({
     <section
       id={id}
       data-stack-pin={pin ? "true" : "false"}
-      className={`stack-section min-h-screen w-full relative ${
-        overflowHidden ? "overflow-hidden" : ""
-      } ${scrollable ? "h-screen overflow-y-auto overscroll-contain" : ""} ${className}`}
+      className={`stack-section md:min-h-screen w-full relative ${overflowHidden ? "md:overflow-hidden" : ""
+        } ${scrollable ? "md:h-screen md:overflow-y-auto md:overscroll-contain" : ""} ${className}`}
     >
       {children}
     </section>

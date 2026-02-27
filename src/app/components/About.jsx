@@ -50,11 +50,11 @@ function About() {
   return (
     <div
       id="about"
-      className="about scroll-smooth flex pb-0 h-auto p-3 justify-items-end w-full text-[] -mb-20"
+      className="about scroll-smooth flex pb-10 md:pb-0 h-auto p-3 justify-items-end w-full md:-mb-20 pt-10 md:pt-0"
     >
       <div className="w-full">
         <h2 className="text-4xl md:text-7xl lg:text-9xl tracking-tighter font-sans font-semibold mb-10 md:mb-20 uppercase h-auto leading-tight md:leading-[120px] font-regular pt-4 text-center md:text-left md:pl-4 lg:pl-96">
-          Developer , <br /> Programmer
+          Developer , <br className="hidden md:block" /> Programmer
         </h2>
         <div className="flex items-center spinner bottom-72 left-32 align-middle pb-6 md:pb-10 justify-center md:justify-start">
           <span></span>

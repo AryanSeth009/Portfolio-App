@@ -13,7 +13,6 @@ const HeroSection = () => {
   useEffect(() => {
     gsap.to(boxRef.current, {
       opacity: 2,
-
       duration: 2,
       repeat: 4,
     });
@@ -21,7 +20,7 @@ const HeroSection = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Aryan Startup Resume.pdf";
+    link.href = "/Aryan S. Resume.pdf";
     link.download = "Aryan_Seth_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -29,20 +28,22 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="hero-section py-8 lg:py-10 sticky h-auto bg-[#E6E6E1] md:py-20 sm:py-20 px-4 md:pl-6">
-      
-      <div className="grid grid-cols-1 sm:grid-cols-12 pt-4 md:pt-10">
+    <section className="hero-section py-8 sticky h-auto bg-[#E6E6E1] md:py-20 px-4 md:px-6 lg:px-10">
+
+      <div className="grid grid-cols-1 sm:grid-cols-12 pt-4 md:pt-10 gap-y-8 sm:gap-y-0">
+
+        {/* ── Text Column ── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start order-2 sm:order-1"
         >
-          <h1 className="text-[#000] head mb-4 text-3xl sm:text-4xl lg:text-8xl lg:leading-normal font-serif font-extrabold">
+          <h1 className="text-[#000] head mb-4 text-3xl xs:text-4xl sm:text-5xl lg:text-7xl xl:text-8xl lg:leading-normal font-serif font-extrabold">
             <span className="text-[#000] head bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
               sequence={[
                 "Aryan Seth",
@@ -57,27 +58,29 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#3C2A21] text-sm sm:text-base lg:text-xl mb-6">
-            Hi, I'm <span className="font-semibold">Aryan Seth</span>, a web
+
+          <p className="text-[#3C2A21] text-sm sm:text-base lg:text-lg xl:text-xl mb-6 max-w-prose mx-auto sm:mx-0">
+            Hi, I&apos;m <span className="font-semibold">Aryan Seth</span>, a web
             developer specializing in creating dynamic, responsive websites with
             HTML, CSS, JavaScript, and modern frameworks like React and Next.js.
             I am passionate about writing clean, efficient code and delivering
             user-friendly web applications.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-0">
+
+          <div className="flex flex-col xs:flex-row items-center sm:items-start gap-3 mt-4">
             <Link
               href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full sm:mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-black text-center"
+              className="px-6 py-3 w-full xs:w-auto rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-black text-center text-sm sm:text-base"
             >
               Hire Me
             </Link>
             <Link
               href="/"
               onClick={handleDownload}
-              className="px-1 inline-block py-1 w-full lg:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white hover:text-black text-center"
+              className="px-1 py-1 w-full xs:w-auto rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white hover:text-black text-center"
             >
               <button className="w-full">
-                <span className="span-mother hover:rounded-full w-auto p-2 lg:p-0`">
+                <span className="span-mother hover:rounded-full w-auto px-4 py-2 block text-sm sm:text-base">
                   <span>D</span>
                   <span>o</span>
                   <span>w</span>
@@ -89,41 +92,40 @@ const HeroSection = () => {
                   <span>C </span>
                   <span>V </span>
                 </span>
-                {/* <span className="span-mother">
-                  <span>D</span>
-                  <span>o</span>
-                  <span>w</span>
-                  <span>n</span>
-                  <span>l</span>
-                  <span>o</span>
-                  <span>a</span>
-                  <span>d </span>
-                  <span>C </span>
-                  <span>V </span>
-                </span> */}
               </button>
             </Link>
           </div>
         </motion.div>
+
+        {/* ── Image Column ── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-12 lg:mt-0"
+          className="col-span-4 place-self-center order-1 sm:order-2"
         >
           <div
             ref={boxRef}
-            className="prof_img shadow-xl shadow-black rounded-full bg-[#181818] w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] lg:w-[400px] lg:h-[400px] relative"
+            className="prof_img shadow-xl shadow-black rounded-full mx-auto bg-[#181818]
+              w-[160px] h-[160px]
+              xs:w-[200px] xs:h-[200px]
+              sm:w-[220px] sm:h-[220px]
+              md:w-[260px] md:h-[260px]
+              lg:w-[350px] lg:h-[350px]
+              xl:w-[400px] xl:h-[400px]
+              relative"
           >
             <Image
               src="/images/latest picture.jpg"
-              alt="hero image"
-              className="prof_img shadow-lg absolute rounded-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+              alt="Aryan Seth profile photo"
+              className="prof_img shadow-lg rounded-full object-cover w-full h-full p-2"
+              width={380}
+              height={380}
+              sizes="(max-width: 480px) 160px, (max-width: 640px) 200px, (max-width: 768px) 220px, (max-width: 1024px) 260px, 380px"
             />
           </div>
         </motion.div>
+
       </div>
     </section>
   );

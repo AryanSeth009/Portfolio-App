@@ -12,46 +12,55 @@ export default function StackProvider({ children }) {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const sections = gsap.utils.toArray(".stack-section");
+    let mm = gsap.matchMedia();
 
-    sections.forEach((section, index) => {
-      gsap.set(section, {
-        zIndex: index + 1,
-        opacity: 1,
-        scale: 1,
-      });
-    });
+    // Only apply pinning on desktop (min-width: 768px)
+    mm.add("(min-width: 768px)", () => {
+      const sections = gsap.utils.toArray(".stack-section");
 
-    const pinnableSections = sections.filter(
-      (section) => section.dataset.stackPin !== "false"
-    );
-
-    pinnableSections.forEach((section, index) => {
-      if (index === pinnableSections.length - 1) return;
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: () => `+=${window.innerHeight}`,
-            scrub: true,
-            pin: true,
-            pinSpacing: false,
-            invalidateOnRefresh: true,
-          },
-        })
-        .to(section, {
-          scale: 0.92,
-          opacity: 0.6,
-          ease: "none",
+      sections.forEach((section, index) => {
+        gsap.set(section, {
+          zIndex: index + 1,
+          opacity: 1,
+          scale: 1,
         });
-    });
+      });
 
-    ScrollTrigger.refresh();
+      const pinnableSections = sections.filter(
+        (section) => section.dataset.stackPin !== "false"
+      );
+
+      pinnableSections.forEach((section, index) => {
+        if (index === pinnableSections.length - 1) return;
+
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: section,
+              start: "top top",
+              end: () => `+=${window.innerHeight}`,
+              scrub: true,
+              pin: true,
+              pinSpacing: false,
+              invalidateOnRefresh: true,
+            },
+          })
+          .to(section, {
+            scale: 0.92,
+            opacity: 0.6,
+            ease: "none",
+          });
+      });
+
+      ScrollTrigger.refresh();
+      
+      return () => {
+        // clean up happens automatically by matchMedia
+      };
+    });
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      mm.revert(); // revert all animations and ScrollTriggers created in the matchMedia within this component
     };
   }, []);
 

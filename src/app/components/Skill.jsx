@@ -3,7 +3,7 @@ import "./Skill.css"; // Import the CSS file for the animation
 
 function Skill() {
   return (
-    <div className="skill rounded-xl h-auto p-16 pb-10 md:pb-20 overflow-hidden">
+    <div className="skill rounded-xl h-auto p-4 md:p-16 pb-10 md:pb-20 overflow-hidden">
       <div className="header_part mb-8 md:mb-12">
         <h2 className="text-4xl md:text-8xl text-center uppercase font-bold">
           Skills
