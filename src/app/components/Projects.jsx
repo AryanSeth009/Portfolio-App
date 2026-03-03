@@ -65,7 +65,7 @@ function Projects() {
                     loop
                     muted
                     className="v_1 absolute h-[300px] md:h-[600px] w-[90%] md:w-[650px] inset-0 m-auto"
-                    src="./videos/TalentRanker.mp4"
+                    src="./videos/TalentRanker.mkv"
                   ></video>
                   <div className="flex flex-row pt-4">
                     <a
